@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elle's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+        to {
+            width: 50%;
+        }
+    }
+
+    .animate-typewriter {
+        animation: typewriter 2s steps(20) 1s forwards, blink 0.75s step-end infinite;
+        width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid white;
+    }
+
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }
+
+    /* Fixed SVG text animation */
+    @keyframes movePath {
+        0% {
+            offset-distance: 0%;
+        }
+        100% {
+            offset-distance: 100%;
+        }
+    }
+
+    .moving-text {
+        animation: movePath 0s linear infinite;
+    }
+
+  </style>
+</head>
+
+<body class="m-0 p-0 overflow-x-hidden">
+   <section class="relative h-screen w-full overflow-hidden bg-blue-500 text-white px-6">
+        <!-- Navbar -->
+        <nav class="absolute top-0 left-0 w-full z-20 flex justify-between items-center px-8 py-4">
+                <div class="font-semibold text-lg">Eliz Edlina</div>
+                <ul class="flex space-x-6 text-sm md:text-base">
+                    <li><a href="landing.php" class="hover:underline">Home</a></li>
+                    <li><a href="landing.php#intro" class="hover:underline">Introduction</a></li>
+                    <li><a href="landing.php#projects" class="hover:underline">Projects</a></li>
+                </ul>
+        </nav>
+
+        <!-- Content Grid -->
+        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between h-full w-full max-w-7xl mx-auto">
+            <div class="md:w-1/2 space-y-4">
+            <h1 class="text-2xl md:text-4xl font-serif leading-relaxed max-w-xl text-left overflow-hidden whitespace-nowrap border-r-4 border-white animate-typewriter">
+                Final Year Project
+            </h1>
+
+            <p class="text-md font-inter leading-relaxed max-w-xl text-justify ">
+                This is my work, my final year project for my last semester of degree.<br />
+                <br />I developed BookingHive, a hotel booking platform with Collaborative Filtering
+                that matches user preferences from their previous bookings.<br />
+                <br />Was it difficult? I'd give it a 7/10 since I had to play with backend a lot.
+            </p>
+        </div>
+
+        <!-- Right Grid Layout -->
+        <div class="md:w-1/2 flex items-end justify-end gap-4 h-full pr-8">
+            <!-- Card 1 -->
+            <div class="relative group w-40 h-[430px] bg-white text-black flex flex-col justify-end items-center p-2 overflow-hidden">
+                <img src="assets/fyp/img-1.jpg" class="w-full h-[380px] object-cover mb-2 transition-transform duration-500 group-hover:scale-105" />
+                
+                <!-- Hover Overlay -->
+                <div class="absolute inset-0 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center p-2">
+                    <p class="text-xs">Explored the recommender system, Collaborative Filtering Algorithm for my web app</p>
+                </div>
+                <p class="font-bold mt-2">ALGORITHM</p>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="relative group w-40 h-[340px] bg-white text-black flex flex-col justify-end items-center p-2 overflow-hidden">
+                <img src="assets/fyp/img-2.jpg" class="w-full h-[340px] object-cover mb-2 transition-transform duration-500 group-hover:scale-105" />
+                <!-- Hover Overlay -->
+                <div class="absolute inset-0 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center p-2">
+                    <p class="text-xs">My first time using and exploring Tailwind CSS</p>
+                </div>
+                <p class="font-bold mt-2">CSS</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="relative group w-40 h-[500px] bg-white text-black flex flex-col justify-end items-center p-2 overflow-hidden">
+                <img src="assets/fyp/img-3.jpg" class="w-full h-[500px] object-cover mb-2 transition-transform duration-500 group-hover:scale-105" />
+                <!-- Hover Overlay -->
+                <div class="absolute inset-0 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center p-2">
+                    <p class="text-xs">Laravel made things much easier for my development</p>
+                </div>
+                <p class="font-bold mt-2">Framework</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative bg-amber-50 text-black py-16 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-100 pointer-events-none">
+            <svg class="w-full h-full" viewBox="0 0 1200 400" preserveAspectRatio="none">
+                <defs>
+                <path id="sPath" 
+                    d="
+                        M0,50 
+                        Q100,800 350,80 
+                        Q500,-200 650,50 
+                        Q800,800 1050,50 
+                        Q1200,-200 1350,50 
+                        Q1450,300 1650,50
+                    " 
+                    fill="none" />            
+                </defs>
+                <text font-size="36" fill="black" opacity="0.5" class="uppercase tracking-widest font-bold">
+                    <textPath href="#sPath" id="movingText" startOffset="0%">
+                        <animate attributeName="startOffset" 
+                            values="0%;-100%" 
+                            dur="25s" 
+                            repeatCount="indefinite"/>
+                                ELIZ EDLINA • DESIGN • CREATIVE • PORTFOLIO • ELIZ EDLINA • DESIGN • CREATIVE • PORTFOLIO •
+                                ELIZ EDLINA • DESIGN • CREATIVE • PORTFOLIO • ELIZ EDLINA • DESIGN • CREATIVE • PORTFOLIO • 
+                                ELIZ EDLINA • DESIGN • CREATIVE • PORTFOLIO • ELIZ EDLINA • DESIGN • CREATIVE • PORTFOLIO •                       
+                    </textPath>
+                </text>
+            </svg>
+        </div>
+
+        <!-- Actual Section Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-6">
+            <!-- Header -->
+            <div class="text-left px-4 mb-12">
+                <h2 class="text-4xl md:text-4xl font-serif text-blue-500 leading-snug">WORK</h2>
+            </div>
+
+            <!-- Horizontal Scroll Container -->
+            <div class="relative">
+                <div class="overflow-x-auto hide-scrollbar">
+                    <div class="flex gap-6 md:gap-10 w-max px-2">
+                        <!-- Project Images -->
+                        <div class="relative min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
+                            <img src="assets/fyp/login.png" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500" />
+                        </div>
+
+                        <div class="relative min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
+                            <img src="assets/fyp/login 2.png" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500" />
+                        </div>
+
+                        <div class="relative min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
+                            <img src="assets/fyp/page 1.png" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500" />
+                        </div>
+
+                        <div class="relative min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
+                            <img src="assets/fyp/page 2.png" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500" />
+                        </div>
+
+                        <div class="relative min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
+                            <img src="assets/fyp/faq.png" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        
+                        <div class="relative min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
+                            <img src="assets/fyp/contact.png" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-blue-500 flex justify-end items-center gap-2 px-8 m-10">
+                    <span>scroll here</span>
+                    <img width="24" height="24" src="https://img.icons8.com/?size=100&id=Ek7khsXSeZ71&format=png&color=000000" alt="arrow" />
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

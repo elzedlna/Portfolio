@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elle's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @keyframes riseFromBottom {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 100%;
+    }
+  }
+
+  @keyframes fadeInText {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-layer {
+    animation: riseFromBottom 2s ease-in-out forwards;
+  }
+
+  .animate-text {
+    animation: fadeInText 1s ease-out forwards;
+    animation-delay: 2.2s;
+    opacity: 0;
+  }
+  @keyframes scrollUp {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+  }
+
+  .scrolling-images {
+    animation: scrollUp 30s linear infinite;
+  }
+  
+</style>
+
+</head>
+
+<body class="m-0 p-0 overflow-x-hidden">
+   <section class="relative h-screen w-full overflow-hidden bg-white text-black flex items-center justify-center">
+        <nav class="absolute top-0 left-0 w-full z-30 flex justify-between items-center px-8 py-4 text-white">
+            <div class="font-semibold text-lg">Eliz Edlina</div>
+            <ul class="flex space-x-6 text-sm md:text-base">
+                <li><a href="landing.php" class="hover:underline">Home</a></li>
+                <li><a href="landing.php#intro" class="hover:underline">Introduction</a></li>
+                <li><a href="landing.php#projects" class="hover:underline">Projects</a></li>
+            </ul>
+        </nav>
+
+        <!-- Original background layer -->
+        <div class="absolute inset-0 bg-white z-0"></div>
+
+
+        <!-- Grid rise overlay with semi-transparent purple -->
+        <div class="absolute bottom-0 left-0 w-full h-full flex z-10 animate-layer">
+            <div class="w-1/4 bg-purple-800/80"></div>
+            <div class="w-1/4 bg-purple-800/80"></div>
+            <div class="w-1/4 bg-purple-800/80"></div>
+            <div class="w-1/4 bg-purple-800/80"></div>
+        </div>
+
+        <!-- Image layer ON TOP of purple -->
+        <div class="absolute inset-0 z-20">
+            <img src="assets/fyp/bg-1.png" alt="bg" class="w-full h-full object-cover"/>
+        </div>
+
+        <!-- Centered Text -->
+        <div class="absolute z-20 text-center w-full top-1/2 -translate-y-1/2 text-white animate-text">
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-widest mb-2">MASMED</h1>
+            <p>Malaysian Academy of SME & Entrepreneurship Development (MASMED)</p>
+        </div>
+    </section>
+
+    <section class="relative h-min w-full overflow-hidden bg-amber-50 text-black px-6">
+        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between h-full w-full max-w-7xl mx-auto">
+            <div class="md:w-1/2 space-y-4 ">
+                <h1 class="text-2xl md:text-4xl py-4 font-serif leading-relaxed max-w-xl text-left overflow-hidden whitespace-nowrap  ">
+                     Group Project
+                </h1>
+                <p class="text-md font-inter leading-relaxed max-w-xl text-justify  pr-12">
+                    This group project required us to develop a prototype system for MASMED, an organization affiliated with UiTM.
+                </p>
+                <p class="text-md font-inter leading-relaxed max-w-xl text-justify  pr-12">
+                    Many vendors frequently open booths at UiTM events — providing valuable exposure and encouraging entrepreneurship among both students and external participants.
+                </p>
+                <p class="text-md font-inter leading-relaxed max-w-xl text-justify pr-12">
+                    To streamline the vendor booking process, each team was tasked with creatively designing a registration system tailored to UiTM Shah Alam’s needs.
+                </p>
+            </div>
+
+           <!-- Right: 3D Motion Scroll -->
+            <div class="relative overflow-y-scroll h-screen px-4 py-12 space-y-12">
+                <!-- You can tweak these transforms and shadows for the 3D illusion -->
+                <div class="transform hover:scale-105 transition duration-500 shadow-2xl rounded-lg overflow-hidden">
+                    <img src="assets/masmed/img-2.png" class="w-full h-80 object-cover" />
+                </div>
+                <div class="transform hover:scale-105 transition duration-500 shadow-2xl rounded-lg overflow-hidden">
+                    <img src="assets/masmed/img-3.png" class="w-full h-80 object-cover" />
+                </div>
+                <div class="transform hover:scale-105 transition duration-500 shadow-2xl rounded-lg overflow-hidden">
+                    <img src="assets/masmed/img-4.png" class="w-full h-80 object-cover" />
+                </div>
+                <div class="transform hover:scale-105 transition duration-500 shadow-2xl rounded-lg overflow-hidden">
+                    <img src="assets/masmed/img-5.png" class="w-full h-80 object-cover" />
+                </div>
+                <div class="transform hover:scale-105 transition duration-500 shadow-2xl rounded-lg overflow-hidden">
+                    <img src="assets/masmed/img-1.png" class="w-full h-80 object-cover" />
+                </div>
+                <div class="transform hover:scale-105 transition duration-500 shadow-2xl rounded-lg overflow-hidden">
+                    <img src="assets/masmed/img-6.png" class="w-full h-80 object-cover" />
+                </div>
+            </div>
+    </section>
+</body>
+</html>

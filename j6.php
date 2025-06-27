@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brianne-Inspired Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+
+<body class="bg-amber-50 text-rose-800">
+  <header class="flex justify-between items-center px-6 py-6 border-b border-rose-800 mt-4 ">
+        <nav class="absolute top-0 left-0 w-full z-30 flex justify-between items-center px-8 py-4 text-rose-800">
+            <div class="font-semibold text-lg">Eliz Edlina</div>
+            <ul class="flex space-x-6 text-sm md:text-base">
+                <li><a href="landing.php" class="hover:underline">Home</a></li>
+                <li><a href="landing.php#intro" class="hover:underline">Introduction</a></li>
+                <li><a href="landing.php#projects" class="hover:underline">Projects</a></li>
+            </ul>
+        </nav>
+  </header>
+
+    <!-- Intro -->
+    <section class="grid md:grid-cols-2 items-center px-8">
+        <!-- Text Content -->
+        <div>
+            <p class="text-base leading-relaxed mt-4">
+                Yes, this is another group project of mine. We were assigned a task to build and create any system
+                but using Laravel, a framework that I first discovered and learned during my degree years. I decided to use Jilid Enam,
+                a coffee shop located in section 6, Shah Alam, mainly because I was working as a part-time barista there.
+            </p>
+
+            <p class="text-base leading-relaxed mt-6">
+                I developed and took inspos for the UI from Pinterest as well. For the images, well I personally took them.
+                My team and I built an ordering system to maximise the efficiency and the flow of the orders for the customers, 
+                it's something what we had in mind, and we had to generate a specific order ID for customers too.
+            </p>
+        </div>
+
+        <!-- Coffee Image -->
+        <div class="flex justify-center py-8 items-center">
+            <img src="assets/j6/coffee.png" alt="coffee" class="w-[300px] h-auto object-contain" />
+        </div>
+    </section>
+
+
+    <div class="flex justify-end px-6 pb-2">
+        <span class="text-2xl">*</span>
+    </div>
+    <hr class="border-rose-800">
+
+    <!-- Projects Grid -->
+    <section class="relative bg-[#FFFBEF] py-20 px-6 text-center">
+        <div class="max-w-6xl mx-auto relative h-[500px]">
+            <!-- Left Image -->
+            <div class="absolute top-20 left-[-100px] border-[6px] border-rose-300 p-1 w-[300px]">
+                <img src="assets/j6/food-1.jpg" alt="img-1" class="object-cover w-full h-full" />
+            </div>
+
+            <!-- Left Image (shifted down slightly) -->
+            <div class="absolute bottom-[-300px] left[300px] border-[6px] border-violet-400 p-1 w-[300px]">
+                <img src="assets/j6/food-4.jpg" alt="img-1" class="object-cover w-full h-full" />
+            </div>
+
+            <!-- Center Image (main focus) -->
+            <div class="absolute top-0 left-1/2 transform -translate-x-1/2 border-[6px] border-orange-700 p-1 w-[480px] z-10">
+                <img src="assets/j6/food-3.jpg" alt="img-2" class="object-cover w-full h-full" />
+                <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[4rem] text-[#f05c2d] font-bold select-none">
+                    Jilid Enam
+                </h1>
+            </div>
+
+            <div class="absolute right-[-100px] bottom-[-200px] border-[6px] border-green-800 p-1 w-[400px]">
+                <img src="assets/j6/food-2.jpg" alt="img-3" class="object-cover w-full h-full" />
+            </div>
+
+        </div>
+        <!-- Explore Link -->
+        <div class="mt-[300px]">
+            <a href="#projects" class="uppercase text-sm tracking-widest text-green-800 font-semibold smooth-scroll hover:underline">Explore Jilid Enam</a>
+        </div>
+    </section>
+   
+    <!-- Image Grid Section -->
+    <section id="projects" class="relative bg-white px-8 py-10 overflow-hidden min-h-screen">
+        <!-- Background Video -->
+        <div class="absolute inset-0 min-h-screen">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                <source src="assets/j6/v2.mp4" type="video/mp4"/>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="flex justify-center relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Image 1 -->
+                <div class="bg-red-900 p-4 w-[400px] h-[460px]">
+                    <img src="assets/j6/img-1.png" alt="Project 1" class="w-full h-[430px] object-cover" />
+                </div>
+
+                <!-- Image 2 -->
+                <div class="bg-red-900 p-4 w-[400px] h-[460px]">
+                    <img src="assets/j6/img-2.png" alt="Project 2" class="w-full h-auto object-cover" />
+                </div>
+
+                <!-- Image 3 -->
+                <div class="bg-red-900 p-4 w-[400px] h-[460px]">
+                    <img src="assets/j6/img-3.png" alt="Project 1" class="w-full h-[430px] object-cover" />
+                </div>
+
+                <!-- Image 4 -->
+                <div class="bg-red-900 p-4 w-[400px] h-[460px]">
+                    <img src="assets/j6/img-4.png" alt="Project 2" class="w-full h-[430px] object-cover" />
+                </div>
+
+                <!-- Image 5 -->
+                <div class="bg-red-900 p-4 w-[400px] h-[460px]">
+                    <img src="assets/j6/img-8.png" alt="Project 1" class="w-full h-[430px] object-cover" />
+                </div>
+
+                <!-- Image 6 -->
+                <div class="bg-red-900 p-4 w-[400px] h-[460px]">
+                    <img src="assets/j6/img-6.png" alt="Project 2" class="w-full h-[430px] object-cover" />
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

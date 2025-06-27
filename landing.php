@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elle's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+        @keyframes slide-up {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-50%);
+            }
+        }
+        
+        @keyframes slide-down {
+            0% {
+                transform: translateY(-50%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-slide-up {
+            animation: slide-up 10s linear infinite;
+        }
+        
+        .animate-slide-down {
+            animation: slide-down 10s linear infinite;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="m-0 p-0 overflow-x-hidden">
+    <section class="relative h-screen w-full overflow-hidden">
+        <nav class="absolute top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-4 text-white bg-black/40 backdrop-blur-sm">
+            <div class="font-semibold text-lg">Eliz Edlina</div>
+            <div class="font-semibold pr-4 text-lg">- Front-End Developer</div>
+            <ul class="flex space-x-6 text-sm md:text-base smooth-scroll">
+                <li><a href="landing.php" class="hover:underline">Home</a></li>
+                <li><a href="#intro" class="hover:underline">Introduction</a></li>
+                <li><a href="#projects" class="hover:underline">Projects</a></li>
+            </ul>
+        </nav>
+
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-[-10]" style="pointer-events: none;">
+            <source src="assets/loop.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-6">
+            <h1 class="text-2xl md:text-4xl font-serif leading-relaxed max-w-2xl">
+                Hello, my name is Elle.
+            </h1>
+            <p class="text-2xl md:text-2xl font-inter leading-relaxed max-w-2xl">
+                I don’t have any better ways<br />
+                to say this but here’s my<br />
+                portfolio as a Front-End Developer
+            </p>
+        </div>
+   </section>
+
+   <section id = "intro" class="relative h-[500px] w-full bg-rose-800 flex items-end justify-center gap-4 px-6 pb-10">
+        <div class="flex flex-col ml-16 md:flex-row w-full max-w-7xl gap-12 h-full absolute inset-0 px-6">
+            <!-- Left: Sliding Images -->
+            <div class="w-full md:w-[20%] h-full overflow-hidden relative bg-transparent">
+                <div class="absolute top-0 left-0 w-full h-[200%] animate-slide-up">
+                   <img src="assets/eliz 1.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                    <img src="assets/eliz 2.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                    <img src="assets/eliz 3.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                    <!-- Duplicate for seamless loop -->
+                    <img src="assets/eliz 1.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                    <img src="assets/eliz 2.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                    <img src="assets/eliz 3.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                </div>
+            </div>
+            <div class="w-full md:w-[20%] h-full overflow-hidden relative bg-transparent">
+                <div class="absolute top-0 left-0 w-full h-[200%] animate-slide-down">
+                    <img src="assets/img-4.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                    <img src="assets/eliz-4.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                    <img src="assets/img-5.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                    <!-- Duplicate for seamless loop -->
+                    <img src="assets/img-4.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                    <img src="assets/eliz-4.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                    <img src="assets/img-5.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                </div>
+            </div>
+
+            <!-- Right: Static Text -->
+            <div class="w-full md:w-[40%] ml-8 text-white flex flex-col justify-center translate-x-12 pb-10">
+                <h1 class="text-4xl font-serif pb-4 leading-relaxed">A fresh-grad</h1>
+                <p class="text-xl font-regular text-justify leading-relaxed">
+                    Who have just completed her internship for 3 months with Daythree at Glenmarie, Shah Alam.
+                </p>
+                <p class="text-xl font-regular text-justify leading-relaxed pt-6">
+                    Studied in UiTM Shah Alam and no, to design and develop all this, I am a Computer Science student (in case you thought I was a graphic design major).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="bg-amber-50 min-h-screen px-6 py-12">
+        <div class="max-w-6xl mx-auto">
+            <!-- Description -->
+            <div class="text-rose-800 mb-4">
+            <h1 class="text-4xl md:text-4xl font-serif leading-relaxed max-w-2xl">
+                WORK
+            </h1>
+        </div>
+
+            <!-- Image Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 mb-16">
+                <div>
+                    <a href="fyp.php" class="hover:underline"><p class="mt-2 text-sm font-medium text-rose-800 uppercase mb-4">Project One</p></a>
+                    <div class="aspect-[16/9] overflow-hidden rounded-md">
+                        <img src="assets/fyp.png" alt="eliz" 
+                            class="object-cover w-full h-full transition-transform duration-300 ease-in-out hover:scale-105" />
+                    </div>
+                </div>
+                <div>
+                    <a href="masmed.php" class="hover:underline"><p class="mt-2 text-sm font-medium text-rose-800 uppercase mb-4">Project Two</p></a>
+                    <div class="w-[500px] h-[300px] mx-auto overflow-hidden rounded-[999px]">
+                        <img src="assets/masmed.png" alt="eliz" 
+                            class="object-cover w-full h-full transition-transform duration-300 ease-in-out hover:scale-105" />
+                    </div>
+                </div>
+                <div>
+                    <a href="claim.php" class="hover:underline"><p class="mt-2 text-sm font-medium text-rose-800 uppercase mb-4">Project Three</p></a>
+                    <div class="w-[500px] h-[300px] mx-auto overflow-hidden rounded-[999px]">
+                        <img src="assets/faith.png" alt="eliz" 
+                        class="object-cover w-full h-full transition-transform duration-300 ease-in-out hover:scale-105" />
+                    </div>
+                </div>
+                <div>
+                    <a href="j6.php" class="hover:underline"><p class="mt-2 text-sm font-medium text-rose-800 uppercase mb-4">Project Four</p></a>
+                    <div class="aspect-[16/9] overflow-hidden rounded-md">
+                        <img src="assets/jilid.png" alt="eliz"
+                            class="object-cover w-full h-full transition-transform duration-300 ease-in-out hover:scale-105" />
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-6xl mx-auto">
+           <!-- Description -->
+            <div class="text-rose-800 mb-12 px-4">
+                <p class="text-xl md:text-base font-regular leading-relaxed max-w-2xl mx-auto text-justify-center mt-8">
+                    My past work consists of me developing and designing. I enjoy having to pay attention to small details. 
+                    Would I say I am a perfectionist? NO. I just love seeing pretty and neat interfaces that captivate my interest.
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
