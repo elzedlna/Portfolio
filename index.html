@@ -2,40 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Retro TV UI</title>
+  <link href="css/output.css" rel="stylesheet">
   <style>
     body {
-      background-color: #FFF8DC;
+      background-color: 
+#FFF8DC;
     }
 
     .scanlines {
       background: url('assets/scanlines.png');
       mix-blend-mode: overlay;
       opacity: 0.08;
-    }
-
-    /* Mobile responsive styles */
-    @media (max-width: 768px) {
-      .tv-container {
-        width: 90vw;
-        height: calc(90vw * 0.933);
-        max-width: 400px;
-        max-height: 373px;
-      }
-      
-      .tv-screen {
-        top: 31%;
-        left: 13.5%;
-        width: 67%;
-        height: 45%;
-      }
-      
-      /* Ensure video stays within TV screen bounds on mobile */
-      .tv-screen video {
-        border-radius: 12px;
-        overflow: hidden;
-      }
     }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -44,14 +22,14 @@
 <body class="flex items-center justify-center min-h-screen">
 
     <!-- TV Box + Box -->
-    <div class="relative w-[450px] h-[420px] tv-container flex items-center justify-center">
+    <div class="relative w-[450px] h-[420px] flex items-center justify-center">
       <!-- TV Box image -->
       <img src="assets/tv-box.png" alt="TV Box" class="absolute inset-0 w-full h-full z-10 pointer-events-none">
 
       <!-- Screen inside the TV -->
       <div id="tv-box"
-        class="absolute top-[130px] left-[60px] w-[300px] h-[190px] tv-screen mr-8 pr-9 -translate-x-1 bg-black overflow-hidden rounded-[12px] flex items-center justify-center cursor-pointer z-0">
-        
+        class="absolute top-[130px] left-[60px] w-[300px] h-[190px] mr-8 pr-9 -translate-x-1 bg-black overflow-hidden rounded-[12px] flex items-center justify-center cursor-pointer z-0">
+
         <!-- Static video -->
         <video id="tv-static" class="absolute inset-0 w-full h-full object-cover hidden" autoplay muted></video>
 
@@ -60,6 +38,9 @@
 
           <!-- Click instruction -->
           <span id="tv-instruction" class="text-green-400 text-sm">Click Here </span>
+
+          <!-- Scanlines effect -->
+          <div class="absolute inset-0 scanlines z-30 pointer-events-none"></div>
 
           <!-- TV Content (menu) -->
           <div id="tv-content" class="hidden text-green-400 text-xs p-3 font-mono -translate-x-1">
