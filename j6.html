@@ -16,10 +16,10 @@
 </head>
 
 <body class="bg-amber-50 text-rose-800">
-  <header class="flex justify-between items-center px-4 sm:px-6 py-6 border-b border-rose-800 mt-4">
-        <nav class="absolute top-0 left-0 w-full z-30 flex justify-between items-center px-4 sm:px-8 py-4 text-rose-800">
-            <div class="font-semibold text-base sm:text-lg">Eliz Edlina</div>
-            <ul class="flex space-x-3 sm:space-x-6 text-xs sm:text-sm md:text-base">
+  <header class="flex justify-between items-center px-6 py-6 border-b border-rose-800 mt-4 ">
+        <nav class="absolute top-0 left-0 w-full z-30 flex justify-between items-center px-8 py-4 text-rose-800">
+            <div class="font-semibold text-lg">Eliz Edlina</div>
+            <ul class="flex space-x-6 text-sm md:text-base">
                 <li><a href="landing.html" class="hover:underline">Home</a></li>
                 <li><a href="landing.html#intro" class="hover:underline">Introduction</a></li>
                 <li><a href="landing.html#projects" class="hover:underline">Projects</a></li>
@@ -28,17 +28,17 @@
   </header>
 
     <!-- Intro -->
-    <section class="grid md:grid-cols-2 items-center px-4 sm:px-8">
+    <section class="grid md:grid-cols-2 items-center px-8">
         <!-- Text Content -->
         <div>
-    <p class="text-sm sm:text-base leading-relaxed mt-4">
+    <p class="text-base leading-relaxed mt-4">
         This was another group project I worked on during my degree. 
         We were tasked with building a system using Laravel — a PHP framework I had just started learning at the time. 
         I decided to base the project on Jilid Enam, a coffee shop in Section 6, Shah Alam,
          where I was working part-time as a barista.
     </p>
 
-    <p class="text-sm sm:text-base leading-relaxed mt-6">
+    <p class="text-base leading-relaxed mt-6">
         For the UI, I drew inspiration from Pinterest and personally took all the photos used in the project. 
         Together with my team, we built an ordering system aimed at improving order flow and efficiency for customers.
          One key feature we added was a custom order ID generator to help keep track of individual orders.
@@ -48,49 +48,50 @@
 
         <!-- Coffee Image -->
         <div class="flex justify-center py-8 items-center">
-            <img src="assets/j6/coffee.png" alt="coffee" class="w-[200px] sm:w-[250px] md:w-[300px] h-auto object-contain" />
+            <img src="assets/j6/coffee.png" alt="coffee" class="w-[200px] sm:w-[250px] md:w-[200px] sm:w-[250px] md:w-[300px] h-auto object-contain" />
         </div>
     </section>
 
 
-    <div class="flex justify-end px-4 sm:px-6 pb-2">
-        <span class="text-xl sm:text-2xl">*</span>
+    <div class="flex justify-end px-6 pb-2">
+        <span class="text-2xl">*</span>
     </div>
     <hr class="border-rose-800">
 
     <!-- Projects Grid -->
-    <section class="relative bg-[#FFFBEF] py-12 sm:py-20 px-4 sm:px-6 text-center overflow-hidden">
-        <div class="max-w-6xl mx-auto relative h-[300px] sm:h-[400px] md:h-[500px]">
+    <section class="relative bg-[#FFFBEF] py-20 px-6 text-center">
+        <div class="max-w-6xl mx-auto relative h-[500px]">
             <!-- Left Image -->
-            <div class="absolute top-10 sm:top-20 left-[-50px] sm:left-[-100px] border-[3px] sm:border-[6px] border-rose-300 p-1 w-[150px] sm:w-[200px] md:w-[300px]">
+            <div class="absolute top-20 left-[-100px] border-[6px] border-rose-300 p-1 w-[300px]">
                 <img src="assets/j6/food-1.jpg" alt="img-1" class="object-cover w-full h-full" />
             </div>
 
             <!-- Left Image (shifted down slightly) -->
-            <div class="absolute bottom-[-150px] sm:bottom-[-300px] left-[100px] sm:left-[300px] border-[3px] sm:border-[6px] border-violet-400 p-1 w-[150px] sm:w-[200px] md:w-[300px]">
+            <div class="absolute bottom-[-300px] left[300px] border-[6px] border-violet-400 p-1 w-[300px]">
                 <img src="assets/j6/food-4.jpg" alt="img-1" class="object-cover w-full h-full" />
             </div>
 
             <!-- Center Image (main focus) -->
-            <div class="absolute top-0 left-1/2 transform -translate-x-1/2 border-[3px] sm:border-[6px] border-orange-700 p-1 w-[240px] sm:w-[320px] md:w-[480px] z-10">
+            <div class="absolute top-0 left-1/2 transform -translate-x-1/2 border-[6px] border-orange-700 p-1 w-[480px] z-10">
                 <img src="assets/j6/food-3.jpg" alt="img-2" class="object-cover w-full h-full" />
-                <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[1.5rem] sm:text-[2.5rem] md:text-[4rem] text-[#f05c2d] font-bold select-none">
+                <h1 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[4rem] text-[#f05c2d] font-bold select-none">
                     Jilid Enam
                 </h1>
             </div>
 
-            <div class="absolute right-[-50px] sm:right-[-100px] bottom-[-100px] sm:bottom-[-200px] border-[3px] sm:border-[6px] border-green-800 p-1 w-[200px] sm:w-[300px] md:w-[400px]">
+            <div class="absolute right-[-100px] bottom-[-200px] border-[6px] border-green-800 p-1 w-[400px]">
                 <img src="assets/j6/food-2.jpg" alt="img-3" class="object-cover w-full h-full" />
             </div>
+
         </div>
         <!-- Explore Link -->
-        <div class="mt-[400px] sm:mt-[200px] md:mt-[350px] smooth-scroll">
-            <a href="#projects" class="uppercase text-xs sm:text-sm tracking-widest text-green-800 font-semibold smooth-scroll hover:underline">Explore Jilid Enam</a>
+        <div class="mt-[300px] smooth-scroll">
+            <a href="#projects" class="uppercase text-sm tracking-widest text-green-800 font-semibold smooth-scroll hover:underline">Explore Jilid Enam</a>
         </div>
     </section>
    
     <!-- Image Grid Section -->
-    <section id="projects" class="relative bg-white px-4 sm:px-8 py-10 overflow-hidden min-h-screen">
+    <section id="projects" class="relative bg-white px-8 py-10 overflow-hidden min-h-screen">
         <!-- Background Video -->
         <div class="absolute inset-0 min-h-screen">
             <video autoplay muted loop playsinline class="w-full h-full object-cover">
@@ -99,50 +100,50 @@
             </video>
         </div>
         <div class="flex justify-center relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Image 1 -->
-                <div class="bg-red-900 p-2 sm:p-4 w-full max-w-[400px] h-[300px] sm:h-[460px]">
-                    <img src="assets/j6/img-1.png" alt="Project 1" class="w-full h-[280px] sm:h-[430px] object-cover" />
+                <div class="bg-red-900 p-4 w-[400px] h-[460px]">
+                    <img src="assets/j6/img-1.png" alt="Project 1" class="w-full h-[430px] object-cover" />
                 </div>
 
                 <!-- Image 2 -->
-                <div class="bg-red-900 p-2 sm:p-4 w-full max-w-[400px] h-[300px] sm:h-[460px]">
+                <div class="bg-red-900 p-4 w-[400px] h-[460px]">
                     <img src="assets/j6/img-2.png" alt="Project 2" class="w-full h-auto object-cover" />
                 </div>
 
                 <!-- Image 3 -->
-                <div class="bg-red-900 p-2 sm:p-4 w-full max-w-[400px] h-[300px] sm:h-[460px]">
-                    <img src="assets/j6/img-3.png" alt="Project 1" class="w-full h-[280px] sm:h-[430px] object-cover" />
+                <div class="bg-red-900 p-4 w-[400px] h-[460px]">
+                    <img src="assets/j6/img-3.png" alt="Project 1" class="w-full h-[430px] object-cover" />
                 </div>
 
                 <!-- Image 4 -->
-                <div class="bg-red-900 p-2 sm:p-4 w-full max-w-[400px] h-[300px] sm:h-[460px]">
-                    <img src="assets/j6/img-4.png" alt="Project 2" class="w-full h-[280px] sm:h-[430px] object-cover" />
+                <div class="bg-red-900 p-4 w-[400px] h-[460px]">
+                    <img src="assets/j6/img-4.png" alt="Project 2" class="w-full h-[430px] object-cover" />
                 </div>
 
                 <!-- Image 5 -->
-                <div class="bg-red-900 p-2 sm:p-4 w-full max-w-[400px] h-[300px] sm:h-[460px]">
-                    <img src="assets/j6/img-8.png" alt="Project 1" class="w-full h-[280px] sm:h-[430px] object-cover" />
+                <div class="bg-red-900 p-4 w-[400px] h-[460px]">
+                    <img src="assets/j6/img-8.png" alt="Project 1" class="w-full h-[430px] object-cover" />
                 </div>
 
                 <!-- Image 6 -->
-                <div class="bg-red-900 p-2 sm:p-4 w-full max-w-[400px] h-[300px] sm:h-[460px]">
-                    <img src="assets/j6/img-6.png" alt="Project 2" class="w-full h-[280px] sm:h-[430px] object-cover" />
+                <div class="bg-red-900 p-4 w-[400px] h-[460px]">
+                    <img src="assets/j6/img-6.png" alt="Project 2" class="w-full h-[430px] object-cover" />
                 </div>
             </div>
         </div>
     </section>
     <footer class="bg-rose-800 py-8 border-t mt-auto">
         <div class="max-w-screen-xl mx-auto px-4 text-center text-white">
-            <p class="font-semibold text-base sm:text-lg mb-4">WAN ELIZ EDLINA</p>
+            <p class="font-semibold text-lg mb-4">WAN ELIZ EDLINA</p>
             
             <!-- Social Icons Container -->
             <div class="flex justify-center items-center space-x-4 sm:space-x-8">
                 <!-- Email -->
                 <a href="mailto:edlinaeliz122@gmail.com" 
-                   class="group flex flex-col items-center space-y-1 sm:space-y-2 text-blue-200 hover:text-blue-100 transition-colors duration-200">
-                    <div class="p-1.5 sm:p-2 rounded-full bg-rose-700 group-hover:bg-rose-600 transition-colors duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 sm:w-6 sm:h-6">
+                   class="group flex flex-col items-center space-y-2 text-blue-200 hover:text-blue-100 transition-colors duration-200">
+                    <div class="p-2 rounded-full bg-rose-700 group-hover:bg-rose-600 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                                   d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
@@ -152,9 +153,9 @@
 
                 <!-- LinkedIn -->
                 <a href="https://www.linkedin.com/in/eliz-edlina" target="_blank" 
-                   class="group flex flex-col items-center space-y-1 sm:space-y-2 text-blue-200 hover:text-blue-100 transition-colors duration-200">
-                    <div class="p-1.5 sm:p-2 rounded-full bg-rose-700 group-hover:bg-rose-600 transition-colors duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="currentColor">
+                   class="group flex flex-col items-center space-y-2 text-blue-200 hover:text-blue-100 transition-colors duration-200">
+                    <div class="p-2 rounded-full bg-rose-700 group-hover:bg-rose-600 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                         </svg>
                     </div>
@@ -163,9 +164,9 @@
 
                 <!-- Resume -->
                 <a href="/assets/eliz edlina - curriculum vitae.pdf" target="_blank" 
-                   class="group flex flex-col items-center space-y-1 sm:space-y-2 text-blue-200 hover:text-blue-100 transition-colors duration-200">
-                    <div class="p-1.5 sm:p-2 rounded-full bg-rose-700 group-hover:bg-rose-600 transition-colors duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-6 sm:h-6" viewBox="0 0 20 20" fill="currentColor">
+                   class="group flex flex-col items-center space-y-2 text-blue-200 hover:text-blue-100 transition-colors duration-200">
+                    <div class="p-2 rounded-full bg-rose-700 group-hover:bg-rose-600 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd" />
                         </svg>
                     </div>
