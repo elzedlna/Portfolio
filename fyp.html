@@ -51,15 +51,25 @@
         animation: movePath 0s linear infinite;
     }
 
+    /* Mobile responsive adjustments */
+    @media (max-width: 768px) {
+        .animate-typewriter {
+            width: 100%;
+            white-space: normal;
+            border-right: none;
+            animation: none;
+        }
+    }
+
   </style>
 </head>
 
 <body class="m-0 p-0 overflow-x-hidden">
-   <section class="relative h-screen w-full overflow-hidden bg-blue-500 text-white px-6">
+   <section class="relative min-h-screen w-full overflow-hidden bg-blue-500 text-white px-4 sm:px-6">
         <!-- Navbar -->
-        <nav class="absolute top-0 left-0 w-full z-20 flex justify-between items-center px-8 py-4">
-                <div class="font-semibold text-lg">Eliz Edlina</div>
-                <ul class="flex space-x-6 text-sm md:text-base">
+        <nav class="absolute top-0 left-0 w-full z-20 flex justify-between items-center px-4 sm:px-8 py-4">
+                <div class="font-semibold text-base sm:text-lg">Eliz Edlina</div>
+                <ul class="flex space-x-3 sm:space-x-6 text-xs sm:text-sm md:text-base">
                     <li><a href="landing.html" class="hover:underline">Home</a></li>
                     <li><a href="landing.html#intro" class="hover:underline">Introduction</a></li>
                     <li><a href="landing.html#projects" class="hover:underline">Projects</a></li>
@@ -67,13 +77,13 @@
         </nav>
 
         <!-- Content Grid -->
-        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between h-full w-full max-w-7xl mx-auto">
-            <div class="md:w-1/2 space-y-4">
-            <h1 class="text-2xl md:text-4xl font-serif leading-relaxed max-w-xl text-left overflow-hidden whitespace-nowrap border-r-4 border-white animate-typewriter">
+        <div class="relative z-10 flex flex-col lg:flex-row items-center justify-between min-h-screen w-full max-w-7xl mx-auto pt-20 pb-8">
+            <div class="w-full lg:w-1/2 space-y-4 mb-8 lg:mb-0">
+            <h1 class="text-xl sm:text-2xl md:text-4xl font-serif leading-relaxed max-w-xl text-left overflow-hidden border-r-4 border-white animate-typewriter">
                 Final Year Project
             </h1>
 
-            <p class="text-md font-inter leading-relaxed max-w-xl text-justify ">
+            <p class="text-md sm:text-md font-inter leading-relaxed max-w-xl text-justify">
                 This is my work, my final year project for my last semester of degree.<br />
                 <br />I developed BookingHive, a hotel booking platform with Collaborative Filtering
                 that matches user preferences from their previous bookings.<br />
@@ -82,41 +92,40 @@
         </div>
 
         <!-- Right Grid Layout -->
-        <div class="md:w-1/2 flex items-end justify-end gap-4 h-full pr-8">
-            <!-- Card 1 -->
-            <div class="relative group w-40 h-[430px] bg-white text-black flex flex-col justify-end items-center p-2 overflow-hidden">
-                <img src="assets/fyp/img-1.jpg" class="w-full h-[380px] object-cover mb-2 transition-transform duration-500 group-hover:scale-105" />
+        <div class="w-full lg:w-1/2 flex items-end justify-center lg:justify-end gap-2 sm:gap-4 lg:pr-8">            
+            <div class="relative group w-28 sm:w-32 md:w-40 bg-white text-black flex flex-col justify-end items-center p-1 sm:p-2 overflow-hidden" style="height: calc(100vh - 20rem); min-height: 430px;">
+                <img src="assets/fyp/img-1.jpg" class="w-full flex-1 object-cover mb-1 sm:mb-2 transition-transform duration-500 group-hover:scale-105" />
                 
                 <!-- Hover Overlay -->
-                <div class="absolute inset-0 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center p-2">
+                <div class="absolute inset-0 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center p-1 sm:p-2">
                     <p class="text-xs">Explored the recommender system, Collaborative Filtering Algorithm for my web app</p>
                 </div>
-                <p class="font-bold mt-2">ALGORITHM</p>
+                <p class="font-bold py-2 text-xs sm:text-sm">ALGORITHM</p>
             </div>
             
             <!-- Card 2 -->
-            <div class="relative group w-40 h-[340px] bg-white text-black flex flex-col justify-end items-center p-2 overflow-hidden">
-                <img src="assets/fyp/img-2.jpg" class="w-full h-[340px] object-cover mb-2 transition-transform duration-500 group-hover:scale-105" />
+            <div class="relative group w-28 sm:w-32 md:w-40 bg-white text-black flex flex-col justify-end items-center p-1 sm:p-2 overflow-hidden" style="height: calc(100vh - 25rem); min-height: 340px;">
+                <img src="assets/fyp/img-2.jpg" class="w-full flex-1 object-cover mb-1 sm:mb-2 transition-transform duration-500 group-hover:scale-105" />
                 <!-- Hover Overlay -->
-                <div class="absolute inset-0 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center p-2">
+                <div class="absolute inset-0 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center p-1 sm:p-2">
                     <p class="text-xs">My first time using and exploring Tailwind CSS</p>
                 </div>
-                <p class="font-bold mt-2">CSS</p>
+                <p class="font-bold py-2 text-xs sm:text-sm">CSS</p>
             </div>
 
             <!-- Card 3 -->
-            <div class="relative group w-40 h-[500px] bg-white text-black flex flex-col justify-end items-center p-2 overflow-hidden">
-                <img src="assets/fyp/img-3.jpg" class="w-full h-[500px] object-cover mb-2 transition-transform duration-500 group-hover:scale-105" />
+            <div class="relative group w-28 sm:w-32 md:w-40 bg-white text-black flex flex-col justify-end items-center p-1 sm:p-2 overflow-hidden" style="height: calc(100vh - 15rem); min-height: 500px;">
+                <img src="assets/fyp/img-3.jpg" class="w-full flex-1 object-cover mb-1 sm:mb-2 transition-transform duration-500 group-hover:scale-105" />
                 <!-- Hover Overlay -->
-                <div class="absolute inset-0 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center p-2">
+                <div class="absolute inset-0 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-center p-1 sm:p-2">
                     <p class="text-xs">Laravel made things much easier for my development</p>
                 </div>
-                <p class="font-bold mt-2">Framework</p>
+                <p class="font-bold py-2 text-xs sm:text-sm">Framework</p>
             </div>
         </div>
     </section>
 
-    <section class="relative bg-amber-50 text-black py-16 overflow-hidden">
+    <section class="relative bg-amber-50 text-black py-8 sm:py-16 overflow-hidden">
         <div class="absolute inset-0 z-0 opacity-100 pointer-events-none">
             <svg class="w-full h-full" viewBox="0 0 1200 400" preserveAspectRatio="none">
                 <defs>
@@ -131,11 +140,11 @@
                     " 
                     fill="none" />            
                 </defs>
-                <text font-size="36" fill="black" opacity="0.5" class="uppercase tracking-widest font-bold">
+                <text font-size="20" sm:font-size="28" md:font-size="36" fill="black" opacity="0.5" class="uppercase tracking-widest font-bold">
                     <textPath href="#sPath" id="movingText" startOffset="0%">
                         <animate attributeName="startOffset" 
                             values="0%;-100%" 
-                            dur="25s" 
+                            dur="30s" 
                             repeatCount="indefinite"/>
                                 ELIZ EDLINA • DESIGN • CREATIVE • PORTFOLIO • ELIZ EDLINA • DESIGN • CREATIVE • PORTFOLIO •
                                 ELIZ EDLINA • DESIGN • CREATIVE • PORTFOLIO • ELIZ EDLINA • DESIGN • CREATIVE • PORTFOLIO • 
@@ -146,61 +155,61 @@
         </div>
 
         <!-- Actual Section Content -->
-        <div class="relative z-10 max-w-7xl mx-auto px-6">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
             <!-- Header -->
-            <div class="text-left px-4 mb-12">
-                <h2 class="text-4xl md:text-4xl font-serif text-blue-500 leading-snug">WORK</h2>
+            <div class="text-left px-2 sm:px-4 mb-8 sm:mb-12">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-serif text-blue-500 leading-snug">WORK</h2>
             </div>
 
             <!-- Horizontal Scroll Container -->
             <div class="relative">
                 <div class="overflow-x-auto hide-scrollbar">
-                    <div class="flex gap-6 md:gap-10 w-max px-2">
+                    <div class="flex gap-3 sm:gap-6 md:gap-10 w-max px-1 sm:px-2">
                         <!-- Project Images -->
-                        <div class="relative min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
-                            <img src="assets/fyp/login.png" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500" />
+                        <div class="relative min-w-[180px] sm:min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
+                            <img src="assets/fyp/login.png" class="w-full h-48 sm:h-60 md:h-72 object-cover hover:scale-105 transition-transform duration-500" />
                         </div>
 
-                        <div class="relative min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
-                            <img src="assets/fyp/login 2.png" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500" />
+                        <div class="relative min-w-[180px] sm:min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
+                            <img src="assets/fyp/login 2.png" class="w-full h-48 sm:h-60 md:h-72 object-cover hover:scale-105 transition-transform duration-500" />
                         </div>
 
-                        <div class="relative min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
-                            <img src="assets/fyp/page 1.png" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500" />
+                        <div class="relative min-w-[180px] sm:min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
+                            <img src="assets/fyp/page 1.png" class="w-full h-48 sm:h-60 md:h-72 object-cover hover:scale-105 transition-transform duration-500" />
                         </div>
 
-                        <div class="relative min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
-                            <img src="assets/fyp/page 2.png" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500" />
+                        <div class="relative min-w-[180px] sm:min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
+                            <img src="assets/fyp/page 2.png" class="w-full h-48 sm:h-60 md:h-72 object-cover hover:scale-105 transition-transform duration-500" />
                         </div>
 
-                        <div class="relative min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
-                            <img src="assets/fyp/faq.png" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500" />
+                        <div class="relative min-w-[180px] sm:min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
+                            <img src="assets/fyp/faq.png" class="w-full h-48 sm:h-60 md:h-72 object-cover hover:scale-105 transition-transform duration-500" />
                         </div>
                         
-                        <div class="relative min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
-                            <img src="assets/fyp/contact.png" class="w-full h-72 object-cover hover:scale-105 transition-transform duration-500" />
+                        <div class="relative min-w-[180px] sm:min-w-[220px] md:min-w-[280px] lg:min-w-[320px] rounded-2xl overflow-hidden shadow-lg">
+                            <img src="assets/fyp/contact.png" class="w-full h-48 sm:h-60 md:h-72 object-cover hover:scale-105 transition-transform duration-500" />
                         </div>
                     </div>
                 </div>
 
-                <div class="text-blue-500 flex justify-end items-center gap-2 px-8 m-10">
-                    <span>scroll here</span>
-                    <img width="24" height="24" src="https://img.icons8.com/?size=100&id=Ek7khsXSeZ71&format=png&color=000000" alt="arrow" />
+                <div class="text-blue-500 flex justify-end items-center gap-2 px-4 sm:px-8 m-4 sm:m-10">
+                    <span class="text-sm sm:text-base">scroll here</span>
+                    <img width="20" height="20" sm:width="24" sm:height="24" src="https://img.icons8.com/?size=100&id=Ek7khsXSeZ71&format=png&color=000000" alt="arrow" />
                 </div>
             </div>
         </div>
     </section>
-    <footer class="bg-rose-800 py-8 border-t mt-auto">
+    <footer class="bg-rose-800 py-6 sm:py-8 border-t mt-auto">
         <div class="max-w-screen-xl mx-auto px-4 text-center text-white">
-            <p class="font-semibold text-lg mb-4">WAN ELIZ EDLINA</p>
+            <p class="font-semibold text-base sm:text-lg mb-4">WAN ELIZ EDLINA</p>
             
             <!-- Social Icons Container -->
-            <div class="flex justify-center items-center space-x-8">
+            <div class="flex justify-center items-center space-x-4 sm:space-x-8">
                 <!-- Email -->
                 <a href="mailto:edlinaeliz122@gmail.com" 
-                   class="group flex flex-col items-center space-y-2 text-blue-200 hover:text-blue-100 transition-colors duration-200">
-                    <div class="p-2 rounded-full bg-rose-700 group-hover:bg-rose-600 transition-colors duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                   class="group flex flex-col items-center space-y-1 sm:space-y-2 text-blue-200 hover:text-blue-100 transition-colors duration-200">
+                    <div class="p-1.5 sm:p-2 rounded-full bg-rose-700 group-hover:bg-rose-600 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 sm:w-6 sm:h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                                   d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
@@ -210,9 +219,9 @@
 
                 <!-- LinkedIn -->
                 <a href="https://www.linkedin.com/in/eliz-edlina" target="_blank" 
-                   class="group flex flex-col items-center space-y-2 text-blue-200 hover:text-blue-100 transition-colors duration-200">
-                    <div class="p-2 rounded-full bg-rose-700 group-hover:bg-rose-600 transition-colors duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                   class="group flex flex-col items-center space-y-1 sm:space-y-2 text-blue-200 hover:text-blue-100 transition-colors duration-200">
+                    <div class="p-1.5 sm:p-2 rounded-full bg-rose-700 group-hover:bg-rose-600 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                         </svg>
                     </div>
@@ -221,9 +230,9 @@
 
                 <!-- Resume -->
                 <a href="/assets/eliz edlina - curriculum vitae.pdf" target="_blank" 
-                   class="group flex flex-col items-center space-y-2 text-blue-200 hover:text-blue-100 transition-colors duration-200">
-                    <div class="p-2 rounded-full bg-rose-700 group-hover:bg-rose-600 transition-colors duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
+                   class="group flex flex-col items-center space-y-1 sm:space-y-2 text-blue-200 hover:text-blue-100 transition-colors duration-200">
+                    <div class="p-1.5 sm:p-2 rounded-full bg-rose-700 group-hover:bg-rose-600 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd" />
                         </svg>
                     </div>
@@ -232,8 +241,8 @@
             </div>
 
             <!-- Copyright -->
-            <div class="mt-6 pt-4 border-t border-rose-700">
-                <p class="text-sm text-rose-200">© 2025 Wan Eliz Edlina. All rights reserved.</p>
+            <div class="mt-4 sm:mt-6 pt-4 border-t border-rose-700">
+                <p class="text-xs sm:text-sm text-rose-200">© 2025 Wan Eliz Edlina. All rights reserved.</p>
             </div>
         </div>
     </footer>
