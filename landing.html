@@ -40,10 +40,10 @@
 
 <body class="m-0 p-0 overflow-x-hidden">
     <section class="relative h-screen w-full overflow-hidden">
-        <nav class="absolute top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-4 text-white bg-black/40 backdrop-blur-sm">
-            <div class="font-semibold text-lg">Eliz Edlina</div>
-            <div class="font-semibold pr-4 text-lg">- Front-End Developer</div>
-            <ul class="flex space-x-6 text-sm md:text-base smooth-scroll">
+        <nav class="absolute top-0 left-0 w-full z-50 flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 py-4 text-white bg-black/40 backdrop-blur-sm">
+            <div class="font-semibold text-lg mb-2 sm:mb-0">Eliz Edlina</div>
+            <div class="font-semibold text-sm sm:text-lg mb-2 sm:mb-0 sm:pr-4">- Front-End Developer</div>
+            <ul class="flex space-x-4 sm:space-x-6 text-xs sm:text-sm md:text-base smooth-scroll">
                 <li><a href="landing.html" class="hover:underline">Home</a></li>
                 <li><a href="#intro" class="hover:underline">Introduction</a></li>
                 <li><a href="#projects" class="hover:underline">Projects</a></li>
@@ -55,22 +55,48 @@
             Your browser does not support the video tag.
         </video>
         
-        <div class="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-6">
-            <h1 class="text-2xl md:text-4xl font-serif leading-relaxed max-w-2xl">
+        <div class="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4 sm:px-6">
+            <h1 class="text-xl sm:text-2xl md:text-4xl font-serif leading-relaxed max-w-2xl mb-4">
                 Hello, my name is Elle.
             </h1>
-            <p class="text-2xl md:text-2xl font-inter leading-relaxed max-w-2xl">
-                I don’t have any better ways<br />
-                to say this but here’s my<br />
+            <p class="text-lg sm:text-xl md:text-2xl font-inter leading-relaxed max-w-2xl">
+                I don't have any better ways<br />
+                to say this but here's my<br />
                 portfolio as a Front-End Developer
             </p>
         </div>
    </section>
 
-   <section id = "intro" class="relative h-[500px] w-full bg-rose-800 flex items-end justify-center gap-4 px-6 pb-10">
-        <div class="flex flex-col ml-16 md:flex-row w-full max-w-7xl gap-12 h-full absolute inset-0 px-6">
-            <!-- Left: Sliding Images -->
-            <div class="w-full md:w-[20%] h-full overflow-hidden relative bg-transparent">
+   <section id="intro" class="relative min-h-[500px] w-full bg-rose-800 flex items-end justify-center gap-4 px-4 sm:px-6 pb-10">
+        <div class="flex flex-col lg:flex-row w-full max-w-7xl gap-6 lg:gap-12 h-full absolute inset-0 px-4 sm:px-6 pt-8 lg:pt-0">
+            <!-- Mobile Layout: Images stacked vertically -->
+            <div class="flex lg:hidden w-full gap-4 mb-6">
+                <div class="w-1/2 h-64 overflow-hidden relative bg-transparent">
+                    <div class="absolute top-0 left-0 w-full h-[200%] animate-slide-up">
+                       <img src="assets/eliz 1.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                        <img src="assets/eliz 2.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                        <img src="assets/eliz 3.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                        <!-- Duplicate for seamless loop -->
+                        <img src="assets/eliz 1.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                        <img src="assets/eliz 2.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                        <img src="assets/eliz 3.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                    </div>
+                </div>
+                <div class="w-1/2 h-64 overflow-hidden relative bg-transparent">
+                    <div class="absolute top-0 left-0 w-full h-[200%] animate-slide-down">
+                        <img src="assets/img-4.JPG" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                        <img src="assets/eliz-4.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                        <img src="assets/img-5.JPG" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                        <!-- Duplicate for seamless loop -->
+                        <img src="assets/img-4.JPG" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                        <img src="assets/eliz-4.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                        <img src="assets/img-5.JPG" class="w-full rounded-lg mb-4 object-cover h-1/3" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop Layout: Side by side images -->
+            <div class="hidden lg:block w-full lg:w-[20%] h-full overflow-hidden relative bg-transparent ml-0 lg:ml-16">
                 <div class="absolute top-0 left-0 w-full h-[200%] animate-slide-up">
                    <img src="assets/eliz 1.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
                     <img src="assets/eliz 2.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
@@ -81,7 +107,7 @@
                     <img src="assets/eliz 3.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
                 </div>
             </div>
-            <div class="w-full md:w-[20%] h-full overflow-hidden relative bg-transparent">
+            <div class="hidden lg:block w-full lg:w-[20%] h-full overflow-hidden relative bg-transparent">
                 <div class="absolute top-0 left-0 w-full h-[200%] animate-slide-down">
                     <img src="assets/img-4.JPG" class="w-full rounded-lg mb-4 object-cover h-1/3" />
                     <img src="assets/eliz-4.jpg" class="w-full rounded-lg mb-4 object-cover h-1/3" />
@@ -93,75 +119,86 @@
                 </div>
             </div>
 
-            <!-- Right: Static Text -->
-            <div class="w-full md:w-[40%] ml-8 text-white flex flex-col justify-center translate-x-12 pb-10">
-                <h1 class="text-4xl font-serif pb-4 leading-relaxed">A fresh-grad</h1>
-                <p class="text-xl font-regular text-justify leading-relaxed">
+            <!-- Text Content -->
+            <div class="w-full lg:w-[40%] lg:ml-8 text-white flex flex-col justify-center lg:translate-x-12 pb-4 lg:pb-10">
+                <h1 class="text-2xl sm:text-3xl lg:text-4xl font-serif pb-4 leading-relaxed">A fresh-grad</h1>
+                <p class="text-base sm:text-lg lg:text-xl font-regular text-justify leading-relaxed">
                     Who have just completed her internship for 3 months with Daythree at Glenmarie, Shah Alam.
                 </p>
-                <p class="text-xl font-regular text-justify leading-relaxed pt-6">
+                <p class="text-base sm:text-lg lg:text-xl font-regular text-justify leading-relaxed pt-6">
                     Studied in UiTM Shah Alam and no, to design and develop all this, I am a Computer Science student (in case you thought I was a graphic design major).
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="bg-amber-50 min-h-screen px-6 py-12">
+    <section id="projects" class="bg-amber-50 min-h-screen px-4 sm:px-6 py-12">
         <div class="max-w-6xl mx-auto">
             <!-- Description -->
             <div class="text-rose-800 mb-4">
-            <h1 class="text-4xl md:text-4xl font-serif leading-relaxed max-w-2xl">
-                WORK
-            </h1>
-        </div>
+                <h1 class="text-2xl sm:text-3xl md:text-4xl font-serif leading-relaxed max-w-2xl">
+                    WORK
+                </h1>
+            </div>
 
             <!-- Image Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10 mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 mb-16">
                 <div>
-                    <a href="fyp.html" class="hover:underline"><p class="mt-2 text-sm font-medium text-rose-800 uppercase mb-4">Project One</p></a>
+                    <a href="fyp.html" class="hover:underline">
+                        <p class="mt-2 text-sm font-medium text-rose-800 uppercase mb-4">Project One</p>
+                    </a>
                     <div class="aspect-[16/9] overflow-hidden rounded-md">
                         <img src="assets/fyp.png" alt="eliz" 
                             class="object-cover w-full h-full transition-transform duration-300 ease-in-out hover:scale-105" />
                     </div>
                 </div>
                 <div>
-                    <a href="masmed.html" class="hover:underline"><p class="mt-2 text-sm font-medium text-rose-800 uppercase mb-4">Project Two</p></a>
-                    <div class="w-[500px] h-[300px] mx-auto overflow-hidden rounded-[999px]">
+                    <a href="masmed.html" class="hover:underline">
+                        <p class="mt-2 text-sm font-medium text-rose-800 uppercase mb-4">Project Two</p>
+                    </a>
+                    <div class="w-full max-w-[500px] h-[200px] sm:h-[250px] lg:h-[300px] mx-auto overflow-hidden rounded-[999px]">
                         <img src="assets/masmed.png" alt="eliz" 
                             class="object-cover w-full h-full transition-transform duration-300 ease-in-out hover:scale-105" />
                     </div>
                 </div>
                 <div>
-                    <a href="claim.html" class="hover:underline"><p class="mt-2 text-sm font-medium text-rose-800 uppercase mb-4">Project Three</p></a>
-                    <div class="w-[500px] h-[300px] mx-auto overflow-hidden rounded-[999px]">
+                    <a href="claim.html" class="hover:underline">
+                        <p class="mt-2 text-sm font-medium text-rose-800 uppercase mb-4">Project Three</p>
+                    </a>
+                    <div class="w-full max-w-[500px] h-[200px] sm:h-[250px] lg:h-[300px] mx-auto overflow-hidden rounded-[999px]">
                         <img src="assets/faith-1.png" alt="eliz" 
                         class="object-cover w-full h-full transition-transform duration-300 ease-in-out hover:scale-105" />
                     </div>
                 </div>
                 <div>
-                    <a href="j6.html" class="hover:underline"><p class="mt-2 text-sm font-medium text-rose-800 uppercase mb-4">Project Four</p></a>
+                    <a href="j6.html" class="hover:underline">
+                        <p class="mt-2 text-sm font-medium text-rose-800 uppercase mb-4">Project Four</p>
+                    </a>
                     <div class="aspect-[16/9] overflow-hidden rounded-md">
                         <img src="assets/jilid.png" alt="eliz"
                             class="object-cover w-full h-full transition-transform duration-300 ease-in-out hover:scale-105" />
                     </div>
                 </div>
             </div>
+            
             <div class="max-w-6xl mx-auto">
-           <!-- Description -->
-            <div class="text-rose-800 mb-12 px-4">
-                <p class="text-xl md:text-base font-regular leading-relaxed max-w-2xl mx-auto text-justify-center mt-8">
-                    My past work consists of me developing and designing. I enjoy having to pay attention to small details. 
-                    Would I say I am a perfectionist? NO. I just love seeing pretty and neat interfaces that captivate my interest.
-                </p>
+                <!-- Description -->
+                <div class="text-rose-800 mb-12 px-4">
+                    <p class="text-lg sm:text-xl md:text-base font-regular leading-relaxed max-w-2xl mx-auto text-center mt-8">
+                        My past work consists of me developing and designing. I enjoy having to pay attention to small details. 
+                        Would I say I am a perfectionist? NO. I just love seeing pretty and neat interfaces that captivate my interest.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
+    
     <footer class="bg-rose-800 py-8 border-t mt-auto">
         <div class="max-w-screen-xl mx-auto px-4 text-center text-white">
             <p class="font-semibold text-lg mb-4">WAN ELIZ EDLINA</p>
             
             <!-- Social Icons Container -->
-            <div class="flex justify-center items-center space-x-8">
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
                 <!-- Email -->
                 <a href="mailto:edlinaeliz122@gmail.com" 
                    class="group flex flex-col items-center space-y-2 text-blue-200 hover:text-blue-100 transition-colors duration-200">
