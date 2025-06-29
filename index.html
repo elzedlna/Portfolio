@@ -45,15 +45,10 @@
           <div id="tv-content" class="hidden text-green-400 text-xs p-3 font-mono -translate-x-1">
             <h2 class="mb-2">Welcome to Elle's Portfolio</h2>
             <a href="landing.html" class="block hover:underline">🏠 Home</a>
-            <a href="#" class="block hover:underline">📁 Projects</a>
-            <a href="#" class="block hover:underline">ℹ️ About</a>
           </div>
         </div>
       </div>
     </div>
-
-  <!-- Optional Audio -->
-  <!-- <audio id="tv-sound" src="assets/tv-on.mp3"></audio> -->
 
   <!-- Script -->
   <script>
@@ -65,7 +60,7 @@
 
     tvBox.addEventListener('click', () => {
       // tvSound.play();
-      tvStatic.src = 'assets/tv.mp4';
+      tvStatic.src = 'assets/video.mp4';
       tvStatic.classList.remove('hidden');
       tvStatic.currentTime = 0;
       tvStatic.play();
